@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Bindings</h1>
+    <h3>Property bindings []</h3>
+    <img [src]="imagenUrl"
+         [alt]="'Imagen de un memazo'"
+         [width]="imagenWidth"
+    >
+    <p [style.color] = "'red'"
+       [style.background-color] = "'black'"
+      [innerText]="'Hola amigos'"></p>
+    <div [innerHTML]="'<h1>HOLA</h1>'"></div>
+    <h3>Event bindings()</h3>
+    <button class="btn btn-block btn-info" (click)="aumentarWidth($event)"> Aumentar Imagen</button>
+    <h1 (mouseenter)="restarWidth()">Restar Imagen</h1>
+
+    <h3>NgModel (two way data bindings) bindings[()]</h3>
+    <label for="width">Width</label>
+    <input id="width" type="text"
+           [(ngModel)]="imagenWidth">
+  </div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 text-center">
+    <br>
+    <br>
+    <br>
+    <h1>
+      Hola
+      <span *ngIf="mostrarTitulo">{{titulo}}</span>
+      </h1>
+    <p>Soy el usuario {{usuario.nombre + ' ' + usuario.apellido}}
+    {{1 + 10}}
+    </p>
+
+    <ul>
+      <li *ngFor="let numero of arregloNumeros; let i = index">{{i+1}}.- Valor del numero: {{numero}}</li>
+    </ul>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
