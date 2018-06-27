@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   //interpolacion
+  mostrarComponente = false;
+  contadorDesdePapa = 0;
   titulo = 'Web';
   usuario = {
     nombre: 'Wilson',
@@ -31,5 +33,10 @@ export class AppComponent {
   restarWidth(){
     this.imagenWidth -= 10;
 
+  }
+
+  actualizarContador(contadorHijo){
+    console.log('Se ejecuto', contadorHijo);
+    this.contadorDesdePapa = contadorHijo;
   }
 }
