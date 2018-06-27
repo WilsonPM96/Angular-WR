@@ -1,3 +1,25 @@
 h1 {
   color:red;
 }
+
+.fondo{
+  background-color: #292929;
+}
+.titulo{
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.perfiles{
+  color: #8d8d8d;
+  border-style: solid;
+  border-width: 0.12rem;
+  border-color: #8d8d8d;
+  text-align: center;
+}
+
+.perfiles:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  cursor: pointer;
+}

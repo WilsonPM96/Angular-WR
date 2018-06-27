@@ -39,4 +39,33 @@ export class AppComponent {
     console.log('Se ejecuto', contadorHijo);
     this.contadorDesdePapa = contadorHijo;
   }
+
+
+  arregloUsuarios = [
+    {
+      id:1,
+      imagen:'assets/perfil1.png',
+      texto: 'tatis1909'
+    },
+    {
+      id:2,
+      imagen:'assets/perfil2.png',
+      texto: 'Pedro'
+    },
+    {
+      id:3,
+      imagen:'assets/perfil3.png',
+      texto: 'Jeff'
+    },
+    {
+      id:4,
+      imagen:'assets/perfil4.png',
+      texto: 'Edd'
+    },
+    {
+      id:5,
+      imagen:'assets/perfil5.png',
+      texto: 'Nancy'
+    }
+  ]
 }

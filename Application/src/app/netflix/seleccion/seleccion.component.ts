@@ -6,11 +6,13 @@ import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output} fr
   styleUrls: ['./seleccion.component.css']
 })
 export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
-
+  @Input() imagen:string;
+  @Input() texto:string;
   //Propiedad del web component
   @Input() contador;
   //evento del web component
   @Output() cambioElContador = new EventEmitter();
+  @Output() selecciono:EventEmitter<string> = new EventEmitter();
   constructor() {
     // Configuracion de servicios (providers) u otras configuraciones
     console.log('Constructor');
@@ -34,6 +36,11 @@ export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnChanges(cambios) {
     console.log('On Changes', cambios);
+  }
+
+  seleccionoUsuario(){
+    console.log('Selecciono', this.texto);
+    this.selecciono.emit(this.texto);
   }
 
 
